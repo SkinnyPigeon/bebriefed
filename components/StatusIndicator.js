@@ -5,11 +5,19 @@ import {
   StyleSheet,
 } from 'react-native'
 
+import PropTypes from 'prop-types'
+import Icon from 'react-native-vector-icons/FontAwesome'
+
 const StatusIndicator = (props) => (
-  <View style={styles.border}>
-    <Text style={styles.character}>X</Text>
+  <View style={[styles.border, props.isUp && styles.isUpBorderColor]}>
+    <Text style={[styles.character, props.isUp && styles.isUpCharacterColor]}></Text>
+    <Icon name={props.isUp ? 'check' : 'times' } size={180}/>
   </View>
 )
+
+StatusIndicator.propTypes = {
+  isUp: PropTypes.bool.isRequired,
+}
 
 const styles = StyleSheet.create({
   border: {

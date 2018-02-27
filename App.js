@@ -8,7 +8,7 @@ import MainContainer from './components/MainContainer'
 export default class App extends Component<Props> {
   render() {
     return (
-      <MainContainer />
+      <MainContainer isUp={true}/>
     )
   }
 }

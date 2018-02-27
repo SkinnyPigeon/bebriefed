@@ -6,12 +6,12 @@ import {
 } from 'react-native'
 
 import PropTypes from 'prop-types'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/FontAwesome.js'
 
 const StatusIndicator = (props) => (
   <View style={[styles.border, props.isUp && styles.isUpBorderColor]}>
     <Text style={[styles.character, props.isUp && styles.isUpCharacterColor]}></Text>
-    <Icon name={props.isUp ? 'check' : 'times' } size={180}/>
+    <Icon name={props.isUp ? 'check' : 'times' } size={180} />
   </View>
 )
 
@@ -33,6 +33,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     backgroundColor: 'rgba(0,0,0,0)',
     color: '#BF1534',
+  },
+  isUpBorderColor: {
+    borderColor: '#3CB371'
+  },
+  isUpCharacterColor: {
+    color: '#556B2F'
   },
 })
 

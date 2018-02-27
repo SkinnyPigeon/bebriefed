@@ -5,17 +5,22 @@ import {
   StyleSheet,
 } from 'react-native'
 
+import PropTypes from 'prop-types'
 import StatusIndicator from './StatusIndicator'
 
 export default class StatusScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusIndicator />
+        <StatusIndicator isUp={this.props.isUp}/>
         <Text style={styles.statusText}>Service Up</Text>
       </View>
     )
   }
+}
+
+StatusScreen.propTypes = {
+  isUp: PropTypes.bool.isRequired,
 }
 
 const styles = StyleSheet.create({

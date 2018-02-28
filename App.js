@@ -5,10 +5,12 @@ import {
 
 import MainContainer from './components/MainContainer'
 
+const isUp = true
+
 export default class App extends Component<Props> {
   render() {
     return (
-      <MainContainer isUp={true}/>
+      <MainContainer isUp={isUp}/>
     )
   }
 }

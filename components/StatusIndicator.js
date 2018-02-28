@@ -10,8 +10,9 @@ import Icon from 'react-native-vector-icons/FontAwesome.js'
 
 const StatusIndicator = (props) => (
   <View style={[styles.border, props.isUp && styles.isUpBorderColor]}>
-    <Text style={[styles.character, props.isUp && styles.isUpCharacterColor]}></Text>
-    <Icon name={props.isUp ? 'check' : 'times' } size={180} />
+    <Text style={[styles.character, props.isUp && styles.isUpCharacterColor]}>
+      <Icon name={props.isUp ? 'check' : 'times' } size={180} />
+    </Text>
   </View>
 )
 
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   character: {
-    fontSize: 160,
+    fontSize: 100,
     textAlign: 'center',
     backgroundColor: 'rgba(0,0,0,0)',
     color: '#BF1534',
